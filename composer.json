@@ -2,6 +2,17 @@
     "name": "rschoonheim/laravel-advanced-factories",
     "description": "More advanced testing factories for Laravel.",
     "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Romano Schoonheim",
+            "email": "romano@romanoschoonheim.nl"
+        }
+    ],
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "analyze": "vendor/bin/phpstan analyse -c phpstan.neon\n"
+    },
     "require-dev": {
         "orchestra/testbench": "^7.4",
         "phpunit/phpunit": "^9.5",
@@ -17,11 +28,5 @@
         "psr-4": {
             "Rschoonheim\\LaravelAdvancedFactories\\Tests\\": "tests/"
         }
-    },
-    "authors": [
-        {
-            "name": "Romano Schoonheim",
-            "email": "romano@romanoschoonheim.nl"
-        }
-    ]
+    }
 }
