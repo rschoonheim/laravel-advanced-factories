@@ -12,6 +12,11 @@
             "Rschoonheim\\LaravelAdvancedFactories\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Rschoonheim\\LaravelAdvancedFactories\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Romano Schoonheim",
