@@ -25,7 +25,6 @@ class PlaybookBuilder
         return $this;
     }
 
-    // todo: Move run to playbook object.
     public function run(): void
     {
         foreach ($this->fixtures as $fixture) {

@@ -25,13 +25,12 @@ class PlaybookBuilderTest extends FeatureTest
     /** @test */
     public function add_fixture_adds_fixture_to_playbook(): void
     {
-        $playbook = PlaybookBuilder::create()->addFixture(new FakeFixture());
-    }
-}
+        $fixture = \Mockery::mock(TestingFixture::class);
+        $fixture->shouldReceive('run')
+            ->once();
 
-class FakeFixture implements TestingFixture {
-    public function run(): void
-    {
-        // TODO: Implement run() method.
+        PlaybookBuilder::create()
+            ->addFixture($fixture)
+            ->run();
     }
 }
