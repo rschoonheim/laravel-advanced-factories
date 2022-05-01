@@ -5,7 +5,8 @@
     "require-dev": {
         "orchestra/testbench": "^7.4",
         "phpunit/phpunit": "^9.5",
-        "johnkary/phpunit-speedtrap": "^4.0"
+        "johnkary/phpunit-speedtrap": "^4.0",
+        "nunomaduro/larastan": "^2.1"
     },
     "autoload": {
         "psr-4": {
@@ -22,6 +23,5 @@
             "name": "Romano Schoonheim",
             "email": "romano@romanoschoonheim.nl"
         }
-    ],
-    "require": {}
+    ]
 }
