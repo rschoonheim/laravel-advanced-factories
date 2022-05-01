@@ -19,10 +19,23 @@ class UserOrderControllerTest extends TestCase
     public function index_returns_the_orders_of_the_user(): void
     {
         Playbook::create()
+                ->addFixture(\\Tests\\Fixtures\\Filesystem\\ProductImage::class)
                 ->addFixture(\\Tests\\Fixtures\\Database\\ProductFixture::class)        
                 ->addFixture(\\Tests\\Fixtures\\Database\\ProductPriceFixture::class)        
-                ->addFixture(\\Tests\\Fixtures\\Filesystem\\ProductImage::class)
+                ->addFixture(\\Tests\\Fixtures\\Database\\UserFixture::class)
+                ->addFixture(\\Tests\\Fixtures\\Database\\UserOrderFixture::class)
                 ->run();
+                
+        $response = $this->get('/user/orders');
+        $response->assertJson([
+            'data' => [
+                [
+                    // Contains data persisted
+                    // by the playbook.
+                ]
+            ],
+            'meta' => [],
+        ]);
     }
 }
 ```
