@@ -28,5 +28,12 @@
         "psr-4": {
             "Rschoonheim\\LaravelAdvancedFactories\\Tests\\": "tests/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rschoonheim\\LaravelAdvancedFactories\\Providers\\AdvancedFactoriesServiceProvider"
+            ]
+        }
     }
 }

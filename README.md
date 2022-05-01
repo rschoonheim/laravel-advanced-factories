@@ -1,0 +1,3 @@
+# Laravel Advanced Factories
+Generating
+
