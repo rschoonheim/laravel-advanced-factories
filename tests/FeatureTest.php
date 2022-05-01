@@ -3,6 +3,7 @@
 namespace Rschoonheim\LaravelAdvancedFactories\Tests;
 
 use Orchestra\Testbench\TestCase;
+use Rschoonheim\LaravelAdvancedFactories\Providers\AdvancedFactoriesServiceProvider;
 
 /**
  * class FeatureTest.
@@ -11,5 +12,10 @@ use Orchestra\Testbench\TestCase;
  */
 abstract class FeatureTest extends TestCase
 {
-
+    protected function getPackageProviders($app): array
+    {
+        return [
+            AdvancedFactoriesServiceProvider::class,
+        ];
+    }
 }
