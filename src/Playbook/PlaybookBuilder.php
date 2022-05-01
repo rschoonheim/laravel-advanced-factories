@@ -2,6 +2,7 @@
 
 namespace Rschoonheim\LaravelAdvancedFactories\Playbook;
 
+use Rschoonheim\LaravelAdvancedFactories\Context;
 use Rschoonheim\LaravelAdvancedFactories\Contracts\TestingFixture;
 
 /**
@@ -27,8 +28,9 @@ class PlaybookBuilder
 
     public function run(): void
     {
+        $context = new Context();
         foreach ($this->fixtures as $fixture) {
-            $fixture->run();
+            $fixture->run($context);
         }
     }
 }

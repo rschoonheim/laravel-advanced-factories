@@ -2,6 +2,8 @@
 
 namespace Rschoonheim\LaravelAdvancedFactories\Contracts;
 
+use Rschoonheim\LaravelAdvancedFactories\Context;
+
 /**
  * class TestingFixture.
  *
@@ -9,5 +11,11 @@ namespace Rschoonheim\LaravelAdvancedFactories\Contracts;
  */
 interface TestingFixture
 {
-    public function run(): void;
+    /**
+     * Insert information to a data storage medium.
+     *
+     * @param \Rschoonheim\LaravelAdvancedFactories\Context $context
+     * @return void
+     */
+    public function run(Context $context): void;
 }
